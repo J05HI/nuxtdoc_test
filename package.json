@@ -1,0 +1,29 @@
+{
+  "name": "nuxtdoc",
+  "version": "1.0.0",
+  "description": "A setup to build beautiful documentation with Nuxt and Storyblok",
+  "author": "Dominik Angerer <dominikangerer1@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "generateAndServe": "nuxt generate && nuxt start",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint",
+    "deploy": "nuxt generate && netlify deploy"
+  },
+  "dependencies": {
+    "marked": "^4.0.8",
+    "nuxt": "^2.15.8"
+  },
+  "devDependencies": {
+    "@storyblok/nuxt": "^2.0.5",
+    "axios": "^0.24.0",
+    "cheerio": "^1.0.0-rc.10",
+    "netrc": "^0.1.4",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^6.0.7"
+  }
+}
