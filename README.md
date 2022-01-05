@@ -1,0 +1,1 @@
+nuxtdoc_test
