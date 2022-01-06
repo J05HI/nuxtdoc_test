@@ -20,6 +20,7 @@ export default {
     font-weight: $html-content-headline-font-weight;
     padding-bottom: 10px;
     border-bottom: 1px solid $html-content-headline-border-color;
+    color: $html-content-link-color;
   }
 
   img {
@@ -84,7 +85,7 @@ export default {
     margin: 0;
     padding: 10px 0px;
     border: 0px;
-    border-left: 10px;    
+    border-left: 10px;
     border-style: solid;
     border-color: darken($html-content-quote-background, 10%);
     p {
