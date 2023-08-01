@@ -48,9 +48,12 @@ export default {
 
 <style lang='scss'>
 .doc {
-  max-width: 600px;
+  max-width: 800px;
   margin: 61px auto 0px auto;
-  padding: 40px;
+  padding: 50px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #333;
 
   @media screen and (min-width: 835px) {
     margin-left: 310px;
@@ -63,8 +66,8 @@ export default {
 
 .doc__title {
   margin-top: 0px;
-  font-size: 1.8em;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #d8d8d8;
+  font-size: 2em;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #d8d8d8;
 }
 </style>

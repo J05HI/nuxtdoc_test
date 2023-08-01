@@ -18,20 +18,25 @@ export default {
   flex: 1;
   position: relative;
   padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 }
 
 .feature__name {
-  font-weight: 300;
+  font-weight: 500;
   margin-top: 0px;
   padding-left: 50px;
+  color: #333;
 }
 
 .feature__description {
   font-weight: 300;
+  color: #666;
 }
 
 .feature__image {
-  height: 30px;
+  height: 50px;
   position: absolute;
   left: 20px;
 }

@@ -16,16 +16,16 @@
 <style lang='scss'>
 .header {
   background-color: #fff;
-  padding: 10px 40px;
+  padding: 20px 60px;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 100;
-  height: 60px;
-  line-height: 40px;
+  height: 80px;
+  line-height: 50px;
 
-  background-color: rgba(255,255,255,0.4);
-  box-shadow: 0 0 1px rgba(0,0,0,0.25);
+  background-color: rgba(255,255,255,0.9);
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
   transition: background-color 0.3s ease-in-out;
 
   display: flex;
@@ -33,7 +33,7 @@
   box-sizing: border-box;
 
   @media screen and (min-width: 725px) {
-    padding: 10px 60px;
+    padding: 20px 80px;
   }
 }
 
@@ -42,9 +42,9 @@
     border-color: #fff;
   }
   img {
-    height: 30px;
-    padding-right: 10px;
-    padding-top: 5px;
+    height: 40px;
+    padding-right: 20px;
+    padding-top: 10px;
   }
 }
 
@@ -56,7 +56,8 @@
 
 .header__nav-item {
   display: inline-block;
-  margin: 0 0.6em;
+  margin: 0 1em;
+  font-size: 1.2em;
 }
 
 .header__nav-item--mobile {

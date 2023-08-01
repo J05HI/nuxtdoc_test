@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="layout">
     <Header v-if="showHeader"/>
-    <nuxt/>
+    <main class="main-content">
+      <nuxt/>
+    </main>
     <Sidebar v-if="showSidebar"/>
   </div>
 </template>
@@ -31,6 +33,17 @@ export default {
 
 <style lang='scss'>
 @import '~assets/_variables.scss';
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
 
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;

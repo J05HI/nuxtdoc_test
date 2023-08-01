@@ -17,16 +17,50 @@
                     <nuxt-link class="sidebar__link" :to="child.id">{{child.text}}</nuxt-link>
                   </li>
                 </ul>
-
               </li>
             </ul>
-
           </li>
         </ul>
       </nav>
     </div>
   </div>
 </template>
+
+<style scoped>
+.sidebar {
+  width: 250px;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #f5f5f5;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar__inner {
+  padding: 20px;
+}
+
+.sidebar__category {
+  margin-bottom: 20px;
+}
+
+.sidebar__link {
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar__link--category {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.sidebar__link--doc {
+  margin-left: 10px;
+}
+
+.sidebar__subdocs {
+  margin-left: 20px;
+}
+</style>
 
 <script>
 import cheerio from 'cheerio'
@@ -47,7 +81,7 @@ export default {
         } else {
           pageNav[pageNav.length - 1].children.push({
             id: `#${$elem.attr('id')}`,
-            text: $elem.text(),
+            text: $elem.text()
           })
         }
       })
@@ -56,78 +90,3 @@ export default {
   }
 }
 </script>
-
-<style lang='scss'>
-@import '~assets/_variables.scss';
-
-.sidebar {
-  position: fixed;
-  z-index: 10;
-  top: 61px;
-  left: 0;
-  bottom: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: none;
-  
-  display: none;
-  @media screen and (min-width: 835px) {
-    display: block;
-  }
-
-  li {
-    list-style-type: none;
-    display: block;
-  }
-}
-
-.sidebar__link {
-  display: inline-block;
-  padding-bottom: 2px;
-  margin-bottom: 2px;
-  color: $sidebar-link-color-inactive;
-
-  &.nuxt-link-active {
-    font-weight: 600;
-    color: $sidebar-link-color-active;
-  }
-
-  &.sidebar__link--doc {
-    font-size: 0.85em;
-  }
-
-  &.sidebar__link--category {
-    color: initial;
-    font-weight: 600;
-  }
-}
-
-.sidebar__category {
-  padding: 10px 0px;
-}
-
-.sidebar__inner {
-  width: 230px;
-  padding: 40px 20px 60px 60px;
-}
-
-.sidebar__docs {
-  margin: 0px;
-  padding-left: 0px;
-}
-
-.sidebar__subdocs {
-  list-style-type: none;
-  margin: 0;
-  padding-left: 10px;
-  font-size: 0.80em;
-  .sidebar__link {
-    color: $sidebar-subnav-link-color-inactive;
-  }
-  ul {
-    padding-left: 10px;
-  }
-}
-
-</style>

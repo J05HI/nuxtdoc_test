@@ -28,22 +28,24 @@ export default {
 .link-button {
   position: relative;
   z-index: 1;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   vertical-align: middle;
-  padding: 10px 20px;
+  padding: 15px 25px;
   outline: 0;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2222222;
   text-align: center;
   text-decoration: none;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
   background: $link-button-background;
   color: $link-button-color;
   transform: translateY(0px);
-  transition: transform 200ms ease;
+  transition: transform 200ms ease, background-color 200ms ease, color 200ms ease;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -51,7 +53,7 @@ export default {
     text-decoration: none;
     color: $link-button-hover-color;
     background-color: $link-button-hover-background;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
     border-bottom: 0px;
   }
 }
@@ -66,10 +68,10 @@ export default {
 }
 
 .link-button-wrapper {
-  display: inline-block;
+  display: inline-flex;
 }
 
 .link-button-wrapper + .link-button-wrapper {
-  margin-left: 10px;
+  margin-left: 15px;
 }
 </style>
